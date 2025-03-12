@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 + " is learning "+ "\r\n" + "Android development!");
         selectedPosition = position;
 
-        // Подсветка выбранного элемента
         for(int i = 0; i < mainListView.getChildCount(); i++) {
             mainListView.getChildAt(i).setBackgroundColor(Color.TRANSPARENT);
         }
@@ -134,7 +133,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        // Проверка на дубликат (игнорируем регистр и пробелы)
         if(isDuplicate(input)) {
             showToast("Элемент '" + input + "' уже существует!");
             return;
